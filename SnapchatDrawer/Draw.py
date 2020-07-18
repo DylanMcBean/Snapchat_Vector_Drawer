@@ -1,3 +1,20 @@
+####################
+# IMPORTS
+####################
+from ppadb.client import Client
+import numpy as np
+import TextPositions
+
+####################
+# SETTING UP
+####################
+adb = Client(host='127.0.0.1', port=5037)
+devices = adb.devices()
+device = devices[0]
+
+####################
+# MAIN
+####################
 def PrintText(text,start_x,start_y,font_size=80):
     x_off = 0
     y_off = 0
